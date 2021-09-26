@@ -60,38 +60,6 @@
                         </tr>
                     </table>
                 </div>
-                <div class="checkoutcontainer">
-                    <div class="checkoutcontainerheader">
-                        <h1>Оформление заказа</h1>
-                    </div>
-                    <div class="checkoutformcontainer">
-                        <div class="checkoutform">
-                            <span>Номер телефона:</span>
-                            <br><input type="text" class="checkouttextarea" placeholder="0999999999" name="">
-                            <br><span>ФИО получателя:</span>
-                            <br><input type="text" class="checkouttextarea" placeholder="Иванов Иван Иванович" name="">
-                            <br><span>Адрес доставки:</span>
-                            <br><input type="text" class="checkouttextarea" placeholder="Харьков, ул. Сумская 18, кв 36" name="">
-                            <br><span>Комментарий:<span style="font-size: 10px; color: #555;">(необязательно)</span> 
-                            <br><input type="text" class="checkouttextarea" placeholder="Ваш комментарий" name="">
-                            <br><button onclick="a()" class="acceptorderbutton">Подтвердить заказ</button>
-                        </div>
-                        <div class="checkoutdeliuveryandpayment">
-                            <h2>Доставка и оплата</h2>
-                            <p>Доставка осуществляется методом наложенного платежа 
-                                перевозчиком "Новая почта", с помощью которого и производится 
-                                оплата заказа, которая происходит после получения вашего товара.
-                                Отправка осуществляется в течении двух рабочих дней, доставка 
-                                по украине до трех рабочих дней, с помощью которого и производится 
-                                оплата заказа, которая происходит после получения вашего товара.
-                                с помощью которого и производится 
-                                оплата заказа, которая происходит после получения вашего товара.
-                                с помощью которого и производится 
-                                оплата заказа, которая происходит после получения вашего товара.
-                            </p>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="precheckoutcontainer">
                 <div class="precheckoutheader">
@@ -104,7 +72,7 @@
                         <span class="precheckoutright">2899&nbsp;<span class="cartcurrencysymbol">uah</span></span>
                     </div>
                 </div>
-                <button class="gotocheckoutbutton" onclick="f()">Order</button>
+                <button class="gotocheckoutbutton" onclick="()">Order</button>
             </div>
         </div>
     </div>
