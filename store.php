@@ -1,3 +1,6 @@
+<?php
+include_once ('products.php');
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
