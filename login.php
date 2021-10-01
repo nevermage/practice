@@ -28,7 +28,6 @@ body{
 
 <?php
 session_start();
-if (isset($_SESSION['u']) == 0) {
-    $_SESSION = [];
-}
+
+
 ?>
