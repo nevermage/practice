@@ -17,7 +17,7 @@
 </style>
 <h1>welcome</h1>
 <form method="post">
-<!--    <input type="submit" action="--><?php //header('Location: login.php');?><!--" value="logout">-->
+<!--    <input type="submit" action="--><?php //header('Location: logout.php');?><!--" value="logout">-->
 </form>
 </body>
 </html>
