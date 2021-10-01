@@ -28,8 +28,6 @@ body{
 
 <?php
 session_start();
-$e='123';
-$p='321';
 if (isset($_SESSION['u']) == 0) {
     $_SESSION = [];
 }

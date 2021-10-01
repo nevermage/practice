@@ -16,21 +16,22 @@
     }
 </style>
 <h1>welcome</h1>
-<form method="post">
-<!--    <input type="submit" action="--><?php //header('Location: logout.php');?><!--" value="logout">-->
-</form>
+<a href="logout.php">logout</a>
 </body>
 </html>
 
 <?php
 session_start();
-$e='123';
-$p='321';
-    if ($_POST['email'] == $e && $_POST['password'] == $p) {
+$email='123';
+$password='321';
+if(isset($_POST['email']) == true) {
+    if ($_POST['email'] == $email && $_POST['password'] == $password) {
         $_SESSION['u'] = $_POST['email'];
+
     }
-else{
-    header('Location: login.php');
+    else{
+        header('Location: login.php');
+    }
 }
 
 ?>
