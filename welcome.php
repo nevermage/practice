@@ -33,5 +33,8 @@ if(isset($_POST['email']) == true) {
         header('Location: login.php');
     }
 }
+else{
+    header('Location: login.php');
+}
 
 ?>
