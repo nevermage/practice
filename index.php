@@ -83,7 +83,7 @@ class aboba{
         echo "$this->id $this->name";
     }
 
-};
+}
 
 $hi2 = new aboba();
 $hi2->id = 54;
