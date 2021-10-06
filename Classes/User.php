@@ -1,5 +1,7 @@
 <?php
 
+namespace Classes;
+
 class User
 {
     public $name;
@@ -8,8 +10,8 @@ class User
     {
         $this->name = $name;
     }
-    public function getName()
+    public function getname()
     {
-        echo "My name is $this->name";
+        echo "my name is $this->name";
     }
 }

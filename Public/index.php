@@ -1,6 +1,6 @@
 <?php
 include_once '../Framework/Database/products.php';
-
+include_once '../vendor/autoload.php';
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -8,12 +8,11 @@ require '../vendor/autoload.php';
 
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use Classes\User;
 $logger = new Logger('zxc');
 $logger->pushHandler(new StreamHandler('../log/app.log', Logger::DEBUG));
 
 //$logger->info('3');
-
-
 
 
 ?>
@@ -47,6 +46,9 @@ $logger->pushHandler(new StreamHandler('../log/app.log', Logger::DEBUG));
                 </li>
                     ';
                 }
+
+                $u1 = new User('Tom');
+                $u1->getName();
                 ?>
             </ul>
         </div>
