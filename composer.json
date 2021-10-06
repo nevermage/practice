@@ -1,0 +1,23 @@
+{
+    "name": "nevermage/nlsitefolder",
+    "autoload": {
+        "psr-4": {
+            "Nevermage\\Nlsitefolder\\": "src/"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "nevermage",
+            "email": "maksim14032002@gmail.com"
+        }
+    ],
+    "require": {
+        "friendsofphp/php-cs-fixer": "^3.1",
+        "squizlabs/php_codesniffer": "3.5.5"
+    }
+}
