@@ -16,6 +16,5 @@ foreach ($a as $level1)
 }
 //echo sizeof($a);
 
-
 file_put_contents('output.txt', ob_get_contents());
 ob_end_clean();
