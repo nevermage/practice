@@ -13,7 +13,8 @@
     },
     "autoload": {
      "psr-4": {
-         "Classes\\": "Classes/"
+         "Classes\\": "Classes/",
+         "App\\Controller\\": "App/Controller"
      }
     }
 }

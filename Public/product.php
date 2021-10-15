@@ -14,7 +14,7 @@
     <div class="maincontent2">
         <div class="productcontent">
             <div class="productimage">
-                <img src="img/apple.jpg" alt="img unavailable">
+                <img src="apple.jpg" alt="img unavailable">
             </div>
             <div class="productinfo">
                 <h1 class="productinfoname">Product name</h1>

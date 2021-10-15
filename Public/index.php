@@ -1,19 +1,19 @@
 <?php
-include_once '../Framework/Database/products.php';
-include_once '../vendor/autoload.php';
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+require '../Framework/Database/products.php';
 require '../vendor/autoload.php';
+require __DIR__ . '/../Framework/Router/router.php';
 
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
-use Classes\User;
+use App\Controller\MainController;
+
 $logger = new Logger('zxc');
 $logger->pushHandler(new StreamHandler('../log/app.log', Logger::DEBUG));
 
-//$logger->info('3');
-
+//$logger->info('hiiiiiii');
 
 ?>
 <!DOCTYPE html>
@@ -29,10 +29,31 @@ $logger->pushHandler(new StreamHandler('../log/app.log', Logger::DEBUG));
 <div class="container">
     <?php include '../App/View/Layouts/header.php';?>
     <div class="main">
+        <?php
+        if (isset($_GET['route'])) {
+            $route = $_GET['route'];
+            $pattern = '~^hello/(.*)$~';
+            preg_match($pattern, $route, $matches);
+            if (!empty($matches)) {
+                $controller = new MainController();
+                $controller->sayhello($matches[1]);
+            }
+
+            $pattern2 = '~^$~';
+            preg_match($pattern2, $route, $matches);
+
+            if (!empty($matches)) {
+                $controller2 = new MainController();
+                $controller2->zxc();
+                return;
+            }
+        }
+        $routes
+        ?>
         <div class="productlist">
             <ul>
                 <?php
-                foreach ($products as $id => $pr){
+                foreach ($products as $id => $pr) {
                     echo '
                 <li class="card">
                     <div class="cardimagenbox">
@@ -46,9 +67,6 @@ $logger->pushHandler(new StreamHandler('../log/app.log', Logger::DEBUG));
                 </li>
                     ';
                 }
-
-                $u1 = new User('Tom');
-                $u1->getName();
                 ?>
             </ul>
         </div>
