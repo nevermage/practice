@@ -149,6 +149,7 @@
     let maxlang = list[0].langCount;
     let cmale = 0;
     let cfemale = 0;
+
     list.forEach((item) => {
         sum += item.age;
         if (item.langCount > maxlang) {
