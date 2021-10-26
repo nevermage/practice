@@ -17,11 +17,7 @@
 
 </style>
 <div class="container" id="albums">
-    <div class="product" id="product">
-        <h2></h2>
-        <p>album id: </p>
-        <p>userid: </p>
-    </div>
+    Loading
 </div>
 <script>
 
