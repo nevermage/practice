@@ -1,15 +1,25 @@
 <?php
 namespace App\Controller;
 
+use Classes\View;
+use Classes\Products;
+
 class MainController
 {
-    public function zxc()
-    {
-        echo 'catalog';
-    }
+    /** @var View */
+    private $view;
 
-    public function sayhello($name)
+    public function __construct()
     {
-        echo "hello, $name";
+        $this->view = new View(__DIR__ . '/../View/Templates');
+    }
+    public function catalog()
+    {
+        $products = Products::findAll();
+        $this->view->renderHtml('Catalog/catalog.php', ['products' => $products]);
+    }
+    public function sayHello($name)
+    {
+        $this->view->renderHtml('Userinfo/uinfo.php', ['name' => $name]);
     }
 }

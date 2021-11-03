@@ -25,16 +25,22 @@
                             <th>Sum</th>
                             <th></th>
                         </tr>
+                        <?php
+                        foreach ($products as $pritem) {
+                            echo '
                         <tr>
-                            <td class="cartimagecontainer"><img src="img/apple.jpg" alt=""></td>
-                            <td class="cartproductname"><a href="">Productname</a></td>
-                            <td class="cartpricecontainer"><span>40 </span><span class="cartcurrencysymbol">uah</span></td>
-                            <td class="cartcountcontainer"><button class="cartcountbutton">-</button><span class="cartproductcounter">3</span><button class="cartcountbutton">+</button></td>
-                            <td class="cartpricecontainer"><span>120 </span><span class="cartcurrencysymbol">uah</span></td>
+                            <td class="cartimagecontainer"><img src="apple.jpg" alt=""></td>
+                            <td class="cartproductname"><a href="">' . $pritem['name'] . '</a></td>
+                            <td class="cartpricecontainer"><span>' . $pritem['price'] . '&nbsp;</span><span class="cartcurrencysymbol">uah</span></td>
+                            <td class="cartcountcontainer"><button class="cartcountbutton">-</button><span class="cartproductcounter">' . $pritem['name'] . '</span><button class="cartcountbutton">+</button></td>
+                            <td class="cartpricecontainer"><span>' . $pritem['price'] * $pritem['count'] . '&nbsp;</span><span class="cartcurrencysymbol">uah</span></td>
                             <td><button class="checkoutdeletefromcartbutton">delete</button></td>
                         </tr>
+                            ';
+                        }
+                        ?>
                         <tr>
-                            <td class="cartimagecontainer"><img src="img/apple.jpg" alt=""></td>
+                            <td class="cartimagecontainer"><img src="apple.jpg" alt=""></td>
                             <td class="cartproductname"><a href="">Productname</a></td>
                             <td class="cartpricecontainer"><span>40 </span><span class="cartcurrencysymbol">uah</span></td>
                             <td class="cartcountcontainer"><button class="cartcountbutton">-</button><span class="cartproductcounter">3</span><button class="cartcountbutton">+</button></td>
