@@ -11,7 +11,7 @@
 <div class="container">
 <?php include '../App/View/Layouts/header.php';?>
     <div class="main">
-        <div class="productlist">
+        <div class="productlist" id="app">
             <ul>
                 <?php
                 foreach ($products as $product) {
