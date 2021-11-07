@@ -16,17 +16,14 @@
                 <img src="apple.jpg" alt="img unavailable">
             </div>
             <div class="productinfo">
-                <?php
-                foreach ($product as $pr) {
-                    echo '
-                <h1 class="productinfoname">' . $pr['name'] . '</h1>
+                <h1 class="productinfoname"></h1>
                 <br>
                 <hr class="productinfohr">
                 <div class="productinfobottombar">
                     <table>
                         <tr>
                             <td>
-                                <span class="productinfoprice">' . $pr['price'] . '&nbsp;</span>
+                                <span class="productinfoprice"><?= $product['price'] ?>&nbsp;</span>
                                 <span class="currensysymbol">uah</span>
                             </td>
                             <td class="buttoncell">
@@ -34,9 +31,7 @@
                             </td>
                         </tr>
                     </table>
-                </div>';
-                }
-                ?>
+                </div>'
             </div>
         </div>
     </div>

@@ -7,11 +7,11 @@ use Classes\ActiveRecord;
 class Products extends ActiveRecord
 {
     /** @var string */
-    private $name;
+    protected $name;
     /** @var string */
-    private $descr;
+    protected $descr;
     /** @var float */
-    private $price;
+    protected $price;
 
     /**
      * @return string

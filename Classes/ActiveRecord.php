@@ -2,12 +2,10 @@
 
 namespace Classes;
 
-use phpDocumentor\Reflection\Types\Static_;
+use Classes\Database;
 
 abstract class ActiveRecord
 {
-    /** @var int */
-    protected $id;
     public function __set($name, $value)
     {
         $camelCaseName = $this->underscoreToCamelCase($name);
@@ -17,6 +15,10 @@ abstract class ActiveRecord
     {
         return lcfirst(str_replace('_', '', ucwords($source, '_')));
     }
+
+    /** @var int */
+    protected $id;
+
     /**
      * @return int
      */
@@ -26,21 +28,26 @@ abstract class ActiveRecord
     }
 
     /**
-     * @return Products[]
+     * @return static[]
      */
     public static function findAll(): array
     {
         $db = new Database();
-        return $db->query('SELECT * FROM `products`;', [], Products::class);
+        return $db->query('SELECT * FROM `products`;', [], static::class);
     }
+
     /**
      * @param int $id
-     * @return array
+     * @return static|null
      */
-    public static function getProduct($id)
+    public static function getProduct(int $id): ?self
     {
         $db = new Database();
-        $product = $db->query('SELECT * FROM `products` where idproducts = :id;', [':id' => $id], static::class);
-        return $product;
+        $product = $db->query(
+            'SELECT * FROM `products` WHERE idproducts=:id;',
+            [':id' => $id],
+            static::class
+        );
+        return $product ? $product[0] : null;
     }
 }
