@@ -9,7 +9,7 @@ class ProductControllerCest
     // tests
     public function tryToTestGoToProductPage(AcceptanceTester $I)
     {
-        $I->amOnPage('/');
+        $I->amOnPage('/product/2');
         $I->click('Apple');
         $I->dontSee('Pear');
     }

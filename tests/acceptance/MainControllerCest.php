@@ -14,6 +14,12 @@ class MainControllerCest
         $I->amOnPage('/page');
         $I->seeResponseCodeIs(HttpCode::NOT_FOUND);
     }
+    public function tryToTestProductPage(AcceptanceTester $I)
+    {
+        $I->amOnPage('/product/2');
+        $I->click('Apple');
+        $I->dontSee('Pear');
+    }
 
     public function tryToTestCatalogLoad(AcceptanceTester $I)
     {
