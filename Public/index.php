@@ -6,6 +6,7 @@ require '../vendor/autoload.php';
 
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use Classes\View;
 
 $logger = new Logger('zxc');
 $logger->pushHandler(new StreamHandler('../log/app.log', Logger::DEBUG));
@@ -22,7 +23,8 @@ foreach ($routes as $pattern => $controllerAndAction) {
     }
 }
 if (!$RouteFound) {
-    echo 'Страница не найдена!';
+    http_response_code(404);
+    echo '<h1>Page not found</h1>';
     return;
 }
 $controllerName = $controllerAndAction[0];
