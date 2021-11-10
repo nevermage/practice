@@ -19,7 +19,8 @@ class ProductControllerCest
     public function tryToTestGetProduct(UnitTester $I)
     {
         $product = new Products();
-        $item = $product::getProduct(2);
-        $I->assertContains("Apple", $item);
+        $product->name = 'Title1';
+        $testName = $product->getName();
+        $I->assertEquals('Title1', $testName);
     }
 }

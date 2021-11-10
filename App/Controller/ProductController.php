@@ -17,7 +17,6 @@ class ProductController
     public function product(int $id)
     {
         $product = Products::getProduct($id);
-
         if ($product === null) {
             $this->view->renderHtml('Errors/404.php', [], 404);
             return;

@@ -17,10 +17,10 @@ class Products extends ActiveRecord
 
     public function _data($product)
     {
+        $this->id = $product['id'];
         $this->name = $product['name'];
         $this->descr = $product['description'];
         $this->price = $product['price'];
-        $this->id = $product['id'];
     }
 
     /**
