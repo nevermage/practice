@@ -16,22 +16,22 @@
                 <img src="apple.jpg" alt="img unavailable">
             </div>
             <div class="productinfo">
-                <h1 class="productinfoname"></h1>
+                <h1 class="productinfoname"><?= $product->getName() ?></h1>
                 <br>
                 <hr class="productinfohr">
                 <div class="productinfobottombar">
                     <table>
                         <tr>
                             <td>
-                                <span class="productinfoprice"><?= $product['price'] ?>&nbsp;</span>
-                                <span class="currensysymbol">uah</span>
+                                <span class="productinfoprice"><?= $product->getPrice() ?></span>
+                                <span class="currensysymbol">&nbsp;uah</span>
                             </td>
                             <td class="buttoncell">
                                 <button class="productinfocartbutton">To cart</button>
                             </td>
                         </tr>
                     </table>
-                </div>'
+                </div>
             </div>
         </div>
     </div>

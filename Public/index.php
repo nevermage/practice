@@ -7,6 +7,7 @@ require '../vendor/autoload.php';
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Classes\View;
+use Classes\Products;
 
 $logger = new Logger('zxc');
 $logger->pushHandler(new StreamHandler('../log/app.log', Logger::DEBUG));

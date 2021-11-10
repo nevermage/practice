@@ -12,7 +12,24 @@ class Products extends ActiveRecord
     protected $descr;
     /** @var float */
     protected $price;
+    /** @var int */
+    protected $id;
 
+    public function _data($product)
+    {
+        $this->name = $product['name'];
+        $this->descr = $product['description'];
+        $this->price = $product['price'];
+        $this->id = $product['id'];
+    }
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
     /**
      * @return string
      */

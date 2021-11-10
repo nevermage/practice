@@ -18,9 +18,9 @@
                     echo '
                 <li class="card">
                     <div class="cardimagenbox">
-                        <a href="product/' . $product['idproducts'] . '"><img src="apple.jpg" alt=""></a>
+                        <a href="product/' . $product['id'] . '"><img src="apple.jpg" alt=""></a>
                     </div>
-                    <a class="cardtitle" href="product/' . $product['idproducts'] . '">' . $product['name'] . '</a>
+                    <a class="cardtitle" href="product/' . $product['id'] . '">' . $product['name'] . '</a>
                     <div class="cardbot">
                         <span>' . $product['price'] . ' uah</span>
                         <button onclick="" class="productcardcartbutton">to cart</button>

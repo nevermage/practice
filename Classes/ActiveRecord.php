@@ -2,7 +2,7 @@
 
 namespace Classes;
 
-use Classes\Database;
+use Classes\Products;
 
 abstract class ActiveRecord
 {
@@ -14,17 +14,6 @@ abstract class ActiveRecord
     private function underscoreToCamelCase(string $source): string
     {
         return lcfirst(str_replace('_', '', ucwords($source, '_')));
-    }
-
-    /** @var int */
-    protected $id;
-
-    /**
-     * @return int
-     */
-    public function getId(): int
-    {
-        return $this->id;
     }
 
     /**
@@ -43,11 +32,16 @@ abstract class ActiveRecord
     public static function getProduct(int $id): ?self
     {
         $db = new Database();
+        $pr1 = new Products();
         $product = $db->query(
-            'SELECT * FROM `products` WHERE idproducts=:id;',
+            'SELECT * FROM `products` WHERE id=:id;',
             [':id' => $id],
             static::class
         );
-        return $product ? $product[0] : null;
+        if ($product) {
+            $pr1->_data($product[0]);
+            return $pr1;
+        }
+        return null;
     }
 }
