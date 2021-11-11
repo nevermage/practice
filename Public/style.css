@@ -647,6 +647,7 @@ header{
     display: grid;
     grid-template-columns:  auto 25%;
     column-gap: 20px;
+    padding-top: 30px;
 }
 .leftcartcontainer{
     display: grid;

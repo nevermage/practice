@@ -31,6 +31,3 @@ $actionName = $controllerAndAction[1];
 unset($matches[0]);
 $controller = new $controllerName();
 $controller->$actionName(...$matches);
-
-?>
-<script src="js/main.js"></script>

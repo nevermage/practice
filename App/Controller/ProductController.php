@@ -14,6 +14,11 @@ class ProductController
     {
         $this->view = new View(__DIR__ . '/../View/Templates');
     }
+
+    public function makeProductsEndpoint()
+    {
+        echo json_encode (Products::findAll());
+    }
     public function product(int $id)
     {
         $product = Products::getProduct($id);
