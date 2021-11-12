@@ -14,13 +14,16 @@ class Products extends ActiveRecord
     protected $price;
     /** @var int */
     protected $id;
+    /** @var string */
+    protected $image;
 
-    public function _data($product)
+    public function addData($product)
     {
         $this->id = $product['id'];
         $this->name = $product['name'];
         $this->descr = $product['description'];
         $this->price = $product['price'];
+        $this->image = $product['image'];
     }
 
     /**
@@ -50,5 +53,12 @@ class Products extends ActiveRecord
     public function getPrice(): float
     {
         return $this->price;
+    }
+    /**
+     * @return string
+     */
+    public function getImage(): string
+    {
+        return $this->image;
     }
 }

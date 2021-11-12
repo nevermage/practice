@@ -10,16 +10,22 @@
             <th>Sum</th>
             <th></th>
           </tr>
-          <cart-product></cart-product>
-          <cart-product></cart-product>
-          <cart-product></cart-product>
+          <cart-product
+              v-for="product in cartProducts"
+              :key="product.id"
+              :id="product.id"
+              :name="product.name"
+              :price="product.price"
+              :description="product.description"
+              :image="product.image"
+          />
         </table>
       </div>
     </div>
     <div class="precheckoutcontainer">
       <div class="precheckoutheader">
         <span class="precheckoutleft">Goods in cart:</span>
-        <span class="precheckoutright">4</span>
+        <span class="precheckoutright">{{ cartProducts.length }}</span>
       </div>
       <div class="precheckoutdatacontainer">
         <div class="precheckoutrow">
@@ -34,10 +40,14 @@
 
 <script>
 import cartProduct from "./cartProduct";
-import CartProduct from "./cartProduct";
 export default
 {
   name: "cart-main",
-  components: {CartProduct},
+  components: {cartProduct},
+  computed: {
+    cartProducts() {
+      return this.$store.getters.getCartProducts;
+    },
+  },
 }
 </script>

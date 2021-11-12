@@ -39,7 +39,7 @@ abstract class ActiveRecord
             static::class
         );
         if ($product) {
-            $pr1->_data($product[0]);
+            $pr1->addData($product[0]);
             return $pr1;
         }
         return null;

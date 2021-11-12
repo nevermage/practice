@@ -3,7 +3,15 @@ import {createStore} from 'vuex';
 const store = createStore({
     state: () => ({
         products: [],
-        cartProducts: [],
+        cartProducts: [
+            {
+                description:"qwe",
+                id:"3",
+                image:"pear.jpg",
+                price:"34.00",
+                title:"Pear",
+            }
+        ],
     }),
     getters: {
         getCartProducts: (state) => state.cartProducts,
@@ -20,6 +28,7 @@ const store = createStore({
     mutations: {
         addToCart: (state, product) => {
             state.cartProducts.push(product);
+
         },
         addProductToState: (state, products) => {
             state.products = products;

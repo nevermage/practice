@@ -13,7 +13,7 @@
     <div class="maincontent2">
         <div class="productcontent">
             <div class="productimage">
-                <img src="apple.jpg" alt="img unavailable">
+                <img src="img/<?= $product->getImage() ?>" alt="img unavailable">
             </div>
             <div class="productinfo">
                 <h1 class="productinfoname"><?= $product->getName() ?></h1>
@@ -27,7 +27,9 @@
                                 <span class="currensysymbol">&nbsp;uah</span>
                             </td>
                             <td class="buttoncell">
-                                <button class="productinfocartbutton">To cart</button>
+                                <button class="productinfocartbutton"
+                                        onclick="addToCart(<?= $product->getId() ?>)">
+                                    To cart</button>
                             </td>
                         </tr>
                     </table>
@@ -38,4 +40,5 @@
 </div>
     <?php include '../App/View/Layouts/footer.php';?>
 </body>
+<script src="js/main.js"></script>
 </html>
